@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: IBMVGA8;
   src: url(https://kena.gay/fonts/IBM_BIOS.ttf) format('truetype');
@@ -161,7 +162,10 @@ a {
   color: var(--blue-link-color);
 }
 
-html::after {
+#indexPage::after,
+#moviesPage::after,
+#musicRecommendedPage::after,
+#tvRecommendedPage::after {
   content: " ";
   display: block;
   position: fixed;
@@ -176,7 +180,10 @@ html::after {
   animation: flicker 0.15s infinite;
 }
 
-html::before {
+#indexPage::after,
+#moviesPage::after,
+#musicRecommendedPage::after,
+#tvRecommendedPage::after {
   content: " ";
   display: block;
   position: fixed;
@@ -350,7 +357,6 @@ html {
 .dialog,
 .nowPlayingContextMenu,
 .nowPlayingPlaylist,
-.skinHeader-withBackground,
 html {
   background-color: rgba(0,0,0,1);
 }
@@ -382,6 +388,11 @@ html {
   backdrop-filter: blur(2px);
 }
 
+.skinHeader-withBackground {
+  background-color: rgba(0,0,0,0.9);
+  backdrop-filter: blur(2px);
+}
+
 .mdl-slider::-moz-range-thumb {
 	background: var(--color2);
   opacity: 1!important;
@@ -389,7 +400,7 @@ html {
 
 .mdl-slider-background-lower {
 	background-color: var(--color1);
-    background: linear-gradient(90deg, var(--color1), var(--color2));
+  background: linear-gradient(90deg, var(--color1), var(--color2));
 }
 
 .noBackdropTransparency,
@@ -407,4 +418,3 @@ html {
 .button-link {
   color: var(--color1);
 }
-
